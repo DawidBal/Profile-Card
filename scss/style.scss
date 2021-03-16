@@ -23,6 +23,11 @@ body {
   height: 100%;
 }
 
+.c-image--rounded {
+      border-radius: 50%;
+      border: 0.3125rem solid var(--white);
+}
+
 .wrapper {
   position: relative;
   display: flex;
@@ -58,14 +63,14 @@ body {
   }
 }
 
-.card__component {
+.main {
   display: flex;
   justify-content: center;
   flex-grow: 1;
   align-items: center;
 }
 
-.card {
+.c-card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -79,7 +84,7 @@ body {
   &::before {
     content: '';
     position: absolute;
-    background: url(/profile-card-component-main/images/bg-pattern-card.svg)
+    background: url(../images/bg-pattern-card.svg)
       no-repeat top;
     width: 100%;
     height: 100%;
@@ -94,17 +99,28 @@ body {
     align-items: flex-end;
     flex: 1;
 
-    &__profile {
-      border-radius: 50%;
-      border: 0.3125rem solid var(--white);
     }
-  }
+
   &__profile {
     flex: 1;
     display: flex;
     flex-direction: column;
+  }
+  
+  &__stats {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      border-top: 0.5px solid var(--lightDarkGrey);
 
-    &__data {
+      & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+}
+
+  .c-data {
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -127,59 +143,45 @@ body {
       }
     }
 
-    &__stats {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      border-top: 0.5px solid var(--lightDarkGrey);
+  .c-followers {
+    flex: 3;
+    &__number {
+      color: var(--veryDarkBlue);
+      font-weight: map-get($font-Weights, Bold);
+    }
+    &__title {
+      margin-top: 0.4rem;
+      font-size: 0.5rem;
+      letter-spacing: 2px;
+      color: var(--darkGreyBlue);
+    }
+  }
 
-      & > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+  .c-likes {
+    flex: 1;
+    &__number {
+      color: var(--veryDarkBlue);
+      font-weight: map-get($font-Weights, Bold);
+    }
+    &__title {
+      margin-top: 0.4rem;
+      font-size: 0.5rem;
+      letter-spacing: 2px;
+      color: var(--darkGreyBlue);
+    }
+  }
 
-      &__followers {
-        flex: 3;
-        &__number {
-          color: var(--veryDarkBlue);
-          font-weight: map-get($font-Weights, Bold);
-        }
-        &__title {
-          margin-top: 0.4rem;
-          font-size: 0.5rem;
-          letter-spacing: 2px;
-          color: var(--darkGreyBlue);
-        }
-      }
-
-      &__likes {
-        flex: 1;
-        &__number {
-          color: var(--veryDarkBlue);
-          font-weight: map-get($font-Weights, Bold);
-        }
-        &__title {
-          margin-top: 0.4rem;
-          font-size: 0.5rem;
-          letter-spacing: 2px;
-          color: var(--darkGreyBlue);
-        }
-      }
-
-      &__photos {
-        flex: 3;
-        &__number {
-          color: var(--veryDarkBlue);
-          font-weight: map-get($font-Weights, Bold);
-        }
-        &__title {
-          margin-top: 0.4rem;
-          font-size: 0.5rem;
-          letter-spacing: 2px;
-          color: var(--darkGreyBlue);
-        }
-      }
+  .c-photos {
+    flex: 3;
+    &__number {
+      color: var(--veryDarkBlue);
+      font-weight: map-get($font-Weights, Bold);
+    }
+    &__title {
+      margin-top: 0.4rem;
+      font-size: 0.5rem;
+      letter-spacing: 2px;
+      color: var(--darkGreyBlue);
     }
   }
 }
