@@ -61,13 +61,13 @@ body {
 .wrapper::before {
   top: 0;
   left: 0;
-  background: url(/profile-card-component-main/images/bg-pattern-top.svg) no-repeat bottom right;
+  background: url(../images/bg-pattern-top.svg) no-repeat bottom right;
 }
 
 .wrapper::after {
   top: 100%;
   left: 100%;
-  background: url(/profile-card-component-main/images/bg-pattern-bottom.svg) no-repeat top left;
+  background: url(../images/bg-pattern-bottom.svg) no-repeat top left;
 }
 
 .main {
